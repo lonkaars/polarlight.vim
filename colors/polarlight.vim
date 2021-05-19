@@ -34,8 +34,8 @@ let g:base16_gui07 = "fffff4"
 let s:gui08        = "ff3f4f"
 let g:base16_gui08 = "ff3f4f"
 " orange
-let s:gui09        = "ff3f4f"
-let g:base16_gui09 = "ff3f4f"
+let s:gui09        = "ff9700"
+let g:base16_gui09 = "ff9700"
 " yellow
 let s:gui0A        = "ffd945"
 let g:base16_gui0A = "ffd945"
@@ -43,8 +43,8 @@ let g:base16_gui0A = "ffd945"
 let s:gui0B        = "81f900"
 let g:base16_gui0B = "81f900"
 " cyan
-let s:gui0C        = "45a1ed"
-let g:base16_gui0C = "45a1ed"
+let s:gui0C        = "19d1e5"
+let g:base16_gui0C = "19d1e5"
 " blue
 let s:gui0D        = "45a1ed"
 let g:base16_gui0D = "45a1ed"
@@ -245,8 +245,8 @@ call <sid>hi("Identifier",   s:gui08, "", s:cterm08, "", "none", "")
 call <sid>hi("Include",      s:gui0D, "", s:cterm0D, "", "", "")
 call <sid>hi("Keyword",      s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("Label",        s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("Number",       s:gui09, "", s:cterm09, "", "", "")
-call <sid>hi("Operator",     s:gui05, "", s:cterm05, "", "none", "")
+call <sid>hi("Number",       s:gui0E, "", s:cterm09, "", "", "")
+call <sid>hi("Operator",     s:gui08, "", s:cterm05, "", "none", "")
 call <sid>hi("PreProc",      s:gui0A, "", s:cterm0A, "", "", "")
 call <sid>hi("shShebang",    s:gui03, "", s:cterm0A, "", "", "")
 call <sid>hi("Repeat",       s:gui0A, "", s:cterm0A, "", "", "")
@@ -254,7 +254,7 @@ call <sid>hi("Special",      s:gui0C, "", s:cterm0C, "", "", "")
 call <sid>hi("SpecialChar",  s:gui0F, "", s:cterm0F, "", "", "")
 call <sid>hi("Statement",    s:gui08, "", s:cterm08, "", "", "")
 call <sid>hi("StorageClass", s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("String",       s:gui0B, "", s:cterm0B, "", "", "")
+call <sid>hi("String",       s:gui0A, "", s:cterm0A, "", "", "")
 call <sid>hi("Structure",    s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("Tag",          s:gui0A, "", s:cterm0A, "", "", "")
 call <sid>hi("Todo",         s:gui0A, s:gui01, s:cterm0A, s:cterm01, "", "")
@@ -262,7 +262,7 @@ call <sid>hi("Type",         s:gui0A, "", s:cterm0A, "", "none", "")
 call <sid>hi("Typedef",      s:gui0A, "", s:cterm0A, "", "", "")
 
 " C highlighting
-call <sid>hi("cOperator",   s:gui0C, "", s:cterm0C, "", "", "")
+call <sid>hi("cOperator",   s:gui08, "", s:cterm0C, "", "", "")
 call <sid>hi("cPreCondit",  s:gui0E, "", s:cterm0E, "", "", "")
 
 " C# highlighting
@@ -324,7 +324,7 @@ call <sid>hi("javaScript",        s:gui05, "", s:cterm05, "", "", "")
 call <sid>hi("javaScriptBraces",  s:gui05, "", s:cterm05, "", "", "")
 call <sid>hi("javaScriptNumber",  s:gui09, "", s:cterm09, "", "", "")
 " pangloss/vim-javascript highlighting
-call <sid>hi("jsOperator",          s:gui0D, "", s:cterm0D, "", "", "")
+call <sid>hi("jsOperator",          s:gui08, "", s:cterm0D, "", "", "")
 call <sid>hi("jsStatement",         s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("jsReturn",            s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("jsThis",              s:gui08, "", s:cterm08, "", "", "")
@@ -367,7 +367,7 @@ call <sid>hi("phpParent",          s:gui05, "", s:cterm05, "", "", "")
 call <sid>hi("phpMethodsVar",      s:gui0C, "", s:cterm0C, "", "", "")
 
 " Python highlighting
-call <sid>hi("pythonOperator",  s:gui0E, "", s:cterm0E, "", "", "")
+call <sid>hi("pythonOperator",  s:gui08, "", s:cterm0E, "", "", "")
 call <sid>hi("pythonRepeat",    s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("pythonInclude",   s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("pythonStatement", s:gui0E, "", s:cterm0E, "", "", "")
@@ -411,7 +411,23 @@ call <sid>hi("StartifySlash",    s:gui03, "", s:cterm03, "", "", "")
 call <sid>hi("StartifySpecial",  s:gui03, "", s:cterm03, "", "", "")
 
 " Java highlighting
-call <sid>hi("javaOperator",     s:gui0D, "", s:cterm0D, "", "", "")
+call <sid>hi("javaOperator",     s:gui08, "", s:cterm0D, "", "", "")
+
+" Typescript highlighting
+call <sid>hi("typescriptIdentifierName", s:gui06, "", "", "", "", "")
+call <sid>hi("typescriptImport",         s:gui08, "", "", "", "", "")
+call <sid>hi("typescriptExport",         s:gui08, "", "", "", "", "")
+call <sid>hi("typescriptClassKeyword",   s:gui0C, "", "", "", "", "")
+call <sid>hi("typescriptClassName",      s:gui0D, "", "", "", "", "")
+call <sid>hi("typescriptClassBlock",     s:gui0C, "", "", "", "", "")
+call <sid>hi("typescriptVariable",       s:gui0C, "", "", "", "italic", "")
+call <sid>hi("typescriptFuncKeyword",    s:gui0C, "", "", "", "italic", "")
+call <sid>hi("typescriptFuncCallArg",    s:gui09, "", "", "", "", "")
+call <sid>hi("typescriptMember",         s:gui0B, "", "", "", "", "")
+call <sid>hi("typescriptBlock",          s:gui0B, "", "", "", "", "")
+call <sid>hi("typescriptProp",           s:gui0B, "", "", "", "", "")
+call <sid>hi("typescriptPredefinedType", s:gui0C, "", "", "", "", "")
+call <sid>hi("typescriptTypeReference",  s:gui0D, "", "", "", "", "")
 
 " Remove functions
 delf <sid>hi
